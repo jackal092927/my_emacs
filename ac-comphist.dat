@@ -1,0 +1,34 @@
+((("concatenate" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("vstack" .
+   [0 0 0 0 0 2])
+  ("append" .
+   [1 0 0 0 0 0])
+  ("trainTagList" .
+   [0 0 0 0 0 0 0 0 0 0 0 4])
+  ("testTagList" .
+   [0 0 0 0 0 0 0 0 0 0 5])
+  ("validateTagList" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 5])
+  ("testSet" .
+   [0 0 0 0 0 0 1])
+  ("validateSet" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("data" .
+   [1 0 0 0])
+  ("mydata_small" .
+   [0 0 0 0 0 0 0 0 0 0 0 1])
+  ("require" .
+   [0 0 0 1 0 0 0])
+  ("global-semantic-tag-folding-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("global" .
+   [1 0 0 0 0 0])
+  ("global-ede-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("now" .
+   [1 0 0])
+  ("a" .
+   [1])
+  ("****" .
+   [0 0 0 1])))

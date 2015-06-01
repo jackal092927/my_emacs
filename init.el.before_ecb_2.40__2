@@ -1,0 +1,122 @@
+;;; This file bootstraps the configuration, which is divided into
+;;; a number of other files.
+
+(let ((minver 23))
+  (unless (>= emacs-major-version minver)
+    (error "Your Emacs is too old -- this config requires v%s or higher" minver)))
+
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(require 'init-benchmarking) ;; Measure startup time
+
+(defconst *spell-check-support-enabled* t) ;; Enable with t if you prefer
+(defconst *is-a-mac* (eq system-type 'darwin))
+
+
+;;----------------------------------------------------------------------------
+;; Bootstrap config
+;;----------------------------------------------------------------------------
+(require 'init-compat)
+(require 'init-utils)
+;;(require 'init-site-lisp) ;; Must come before elpa, as it may provide package.el
+(require 'init-elpa)      ;; Machinery for installing required packages
+(require 'init-exec-path) ;; Set up $PATH
+
+;;----------------------------------------------------------------------------
+;; Load configs for specific features and modes
+;;----------------------------------------------------------------------------
+
+(require-package 'wgrep)
+(require-package 'project-local-variables)
+(require-package 'diminish)
+(require-package 'scratch)
+(require-package 'mwe-log-commands)
+
+(require 'init-auto-complete)
+(require 'init-editing-utils)
+
+(require 'init-git)
+(require 'init-github)
+
+(require 'init-my-setting)
+(require 'init-org)
+
+(require 'init-paredit)
+;; (require 'init-lisp)
+
+(require 'init-window-num)
+(require 'init-yasnippet)
+
+;; (require 'init-python-tools)
+(require 'ccode)
+(require 'init-cedet)
+
+(require 'init-ecb)
+;; (error "no error till now")
+(provide 'init)
+;; (error "no error till now")
+
+;; (custom-set-variables
+;;  ;; custom-set-variables was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(ecb-options-version "2.40"))
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  )
+;; ;; Local Variables:
+;; coding: utf-8
+;; no-byte-compile: t
+;; End:
+
+
+
+
+
+
+;; ;; (require 'pluginname)
+;; (require 'package)
+;; (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+
+;; (add-to-list 'load-path "/Users/Jackal/.emacs.d/lisps/color-theme-6.6.0")
+;; (require 'color-theme)
+;; (eval-after-load "color-theme"
+;;   '(progn
+;;      (color-theme-initialize)
+;;      (color-theme-hober)))
+;; (unless (require 'el-get nil 'noerror)
+;;   (with-current-buffer
+;;       (url-retrieve-synchronously
+;;        "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+;;     (goto-char (point-max))
+;;     (eval-print-last-sexp)))
+;; 
+;; ;; (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+;; (el-get 'sync)
+
+;;(tool-bar-mode -1)
+
+;; setting for Python env
+
+;; (require 'python-mode)
+
+;; ;; auto-complete
+;; (add-to-list 'load-path "~/.emacs.d/auto-complete-1.3.1")
+;; (require 'auto-complete)
+;; (require 'auto-complete-config)
+;; (global-auto-complete-mode t)
+;; (setq-default ac-sources '(ac-source-words-in-same-mode-buffers))
+;; (add-hook 'emacs-lisp-mode-hook (lambda () (add-to-list 'ac-sources 'ac-source-symbols)))
+;; (add-hook 'auto-complete-mode-hook (lambda () (add-to-list 'ac-sources 'ac-source-filename)))
+;; (set-face-background 'ac-candidate-face "lightgray")
+;; (set-face-underline 'ac-candidate-face "darkgray")
+;; (set-face-background 'ac-selection-face "steelblue") ;;; 设置比上面截图中更好看的背景颜色
+;; (define-key ac-completing-map "\M-n" 'ac-next)  ;;; 列表中通过按M-n来向下移动
+;; (define-key ac-completing-map "\M-p" 'ac-previous)
+;; (setq ac-auto-start 2)
+;; (setq ac-dwim t)
+;; (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
+

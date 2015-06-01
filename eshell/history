@@ -1,0 +1,128 @@
+./test
+make test
+make test
+./test
+./test
+make test
+./test
+warning: this program uses gets(), which is unsafe.
+make test
+./test
+make test
+./test
+make test
+./test
+aefae aefajwe aefklaew  aefklaewfkl aeflkaj ewflja wefalkwe flkawej    aklefj awe aef 
+make test
+./test
+aef
+make test
+./test
+make test
+./test
+make test
+./test
+make test
+./test
+./test
+make test
+./test
+make test
+./test
+make test
+./test
+make
+c_test.c:183:21: error: use of undeclared identifier 'filenum'; did you mean 'fileno'?
+make
+^
+make
+make
+make
+make
+ls
+open makefile
+cd source/
+ls
+open makefile
+cd ..
+cd ..
+cd test/
+make
+cd ..
+make
+make
+make
+make
+make
+cd ..
+cd hw3/
+ls
+vi makefile2
+vi makefile
+make
+server.c:31:42: error: use of undeclared identifier 'longOpts'
+make
+make
+/usr/include/string.gotomah:75:7: note: 'strcat' declared here
+make
+make
+make
+make
+make
+make
+make
+make
+./client
+./client
+make
+./client
+make
+./client
+make
+./client
+make
+make
+./client 
+make
+./client 
+./client 
+make
+DEBUG_PRINTF(("%s\n", buf))make;
+make
+gcc server.c -o server
+make
+make server 
+make
+MAKE
+make
+make
+ls
+make
+make
+make
+MAKE
+make
+make
+make
+make
+make
+make
+make
+make
+gcc client.c -o client
+MAKE
+touch plan.org
+ll
+ls
+cd ..
+ll
+s
+ls
+ll
+ls
+cd ../debug/
+ll
+ls
+cd /Users/Jackal/Work/cse411/hw6/numAnalHW/debug
+ll
+./invert

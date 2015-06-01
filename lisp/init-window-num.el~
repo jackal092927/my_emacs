@@ -1,0 +1,3 @@
+(require 'window-numbering)
+
+(provide 'init-window-num)
